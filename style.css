@@ -1,0 +1,164 @@
+/* CSS FOR MEMORY MATCH GAME */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: EB Garamond, Georgia, serif;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cinzel, Georgia, serif;
+    font-weight: 700;
+}
+
+header {
+    height: 18vh;
+    font-size: 0;
+    background-color: #F5E3BD;
+    border-bottom: 3px solid #6d4c21;
+    box-shadow: 0 3px 10px #6d4c21;
+}
+
+#header-logo {
+    display: inline-block;
+    width: 25%;
+    padding: 2%;
+    font-size: initial;
+}
+
+#header-content {
+    display: inline-block;
+    width: 100%;
+    padding: 0 2vh 2vh 2vh;
+    font-size: initial;
+    text-align: center;
+}
+
+#menu-bar {
+    text-align: right;
+}
+
+#header-content a {
+    color: #6d4c21;
+    display: inline-block;
+    padding: 0.3vh 2vh;
+    border: 2px solid #6d4c21;
+    border-top: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin: 0 5px;
+}
+#header-content a:hover {
+    color: #d2aa6f;
+    border: 2px solid #d2aa6f;
+    border-top: none;
+}
+
+#header-content h1 {
+    color: #F5E3BD;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 2px 10px #000,
+    0 1px 3px #000;
+    font-size: 8vh;
+    margin: 0.5vh;
+}
+
+#wrapper {
+    height: 82vh;
+    font-size: 0;
+}
+
+#stats-area {
+    display: inline-block;
+    width: 20%;
+    font-size: initial;
+    vertical-align: top;
+    background-color: #F5E3BD;
+    padding: 2%;
+    margin: 2.5%;
+    border: 3px solid #6d4c21;
+    box-shadow: 0 3px 10px #6d4c21;
+}
+
+#stats-area .label {
+    font-family: Cinzel, Georgia, serif;
+    font-weight: 700;
+}
+#stats-area .value {
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
+    line-height: 3.5vh;
+}
+
+#stats-area button {
+    font-family: Cinzel, Georgia, serif;
+    font-weight: 700;
+    color: #6d4c21;
+    padding: 0.3vh 2vh;
+    border: 2px solid #6d4c21;
+    background-color: #F5E3BD;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    display: block;
+    margin: 0 auto;
+}
+#stats-area button:hover {
+    color: #d2aa6f;
+    border: 2px solid #d2aa6f;
+}
+
+#game-area {
+    display: inline-block;
+    width: 75%;
+    font-size: initial;
+    height: 100%;
+    padding: 2%;
+}
+
+.card {
+    display: inline-block;
+    width: 125px;
+    height: 175px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 0 1px 5px;
+    margin: 0.5%;
+    font-size: 0;
+    background: white;
+    position: relative;
+}
+
+.card .front img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .back img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
