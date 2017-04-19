@@ -81,6 +81,18 @@ header {
     font-size: 0;
 }
 
+.general-content {
+    display: block;
+    width: 80%;
+    font-size: initial;
+    vertical-align: top;
+    background-color: #F5E3BD;
+    padding: 2%;
+    margin: 2.5% auto;
+    border: 3px solid #6d4c21;
+    box-shadow: 0 3px 10px #6d4c21;
+}
+
 #stats-area {
     display: inline-block;
     width: 20%;

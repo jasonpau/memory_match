@@ -2,7 +2,7 @@
  * Created by Jason on 4/19/2017.
  */
 
-var
+var firstCardClicked = null;
 
 $(document).ready(function(){
     console.log('document is ready');
@@ -12,7 +12,13 @@ $(document).ready(function(){
 
 function initializeEventHandlers() {
     $('.card').click(function() {
-        console.log('.card has been clicked.');
-        $(this).find('.back').addClass("hidden");
+        if (firstCardClicked === null) {
+            console.log('.card has been clicked, and firstCardClicked was null.');
+            $(this).find('.back').addClass("hidden");
+            firstCardClicked = this;
+        } else {
+            console.log('.card has been clicked, and firstCardClicked was NOT null.');
+
+        }
     });
 }
