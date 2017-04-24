@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Memory Match Game - Jason Pau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond" rel="stylesheet">
@@ -10,9 +11,6 @@
 </head>
 <body>
     <header>
-        <!--<div id="header-logo">-->
-            <!--LOGO-->
-        <!--</div>-->
         <div id="header-content">
             <div id="menu-bar">
                 <a href="#">Settings</a>
@@ -20,20 +18,22 @@
             </div>
             <h1>Empires at War</h1>
         </div>
+        <div class="deco-left"></div>
+        <div class="deco-right"></div>
     </header>
     <div id="wrapper">
         <section id="stats-area">
             <div class="games-played">
-                <div class="label">Games Played</div>
+                <div class="label">Games Played:</div>
                 <div class="value">0</div>
             </div>
             <div class="attempts">
-                <div class="label">Attempts</div>
+                <div class="label">Attempts:</div>
                 <div class="value">0</div>
             </div>
             <div class="accuracy">
-                <div class="label">Accuracy</div>
-                <div class="value">0</div>
+                <div class="label">Accuracy:</div>
+                <div class="value">0%</div>
             </div>
             <button class="reset">Reset Game</button>
         </section>
@@ -70,7 +70,6 @@
                     <img src="images/card-back.png" alt="" />
                 </div>
             </div>
-
             <div class="card">
                 <div class="front">
                     <img src="images/card-front-03.png" alt="" />
@@ -88,7 +87,6 @@
                 </div>
             </div>
 
-
             <div class="card">
                 <div class="front">
                     <img src="images/card-front-04.png" alt="" />
@@ -100,6 +98,87 @@
             <div class="card">
                 <div class="front">
                     <img src="images/card-front-03.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-05.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-05.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-06.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-06.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-07.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-07.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-08.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-08.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-09.png" alt="" />
+                </div>
+                <div class="back">
+                    <img src="images/card-back.png" alt="" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img src="images/card-front-09.png" alt="" />
                 </div>
                 <div class="back">
                     <img src="images/card-back.png" alt="" />
@@ -107,5 +186,18 @@
             </div>
         </section>
     </div>
+    <div id="game-won-wrapper">
+        <div id="game-won">
+            <div id="exit-game-won">X</div>
+            <h2>Victory!</h2>
+            <button class="reset">Play Again</button>
+        </div>
+    </div>
+    <audio id="click">
+        <source src="audio/click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="double_click">
+        <source src="audio/double-click.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
