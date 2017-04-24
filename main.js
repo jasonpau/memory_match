@@ -5,7 +5,6 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 9;
-var match_counter = 0;
 var temporarily_disable_clicks = false;
 var current_card_array = [];
 var sound_click;
@@ -74,7 +73,6 @@ function card_clicked() {
         if ($(first_card_clicked).find('img').attr('src') === $(second_card_clicked).find('img').attr('src')) {
             $(first_card_clicked).attr('status','out_of_gameplay'); // take the cards out of gameplay after a match
             $(second_card_clicked).attr('status','out_of_gameplay');
-            match_counter++;
             matches++;
             $(first_card_clicked).find('img').addClass('matched');
             $(second_card_clicked).find('img').addClass('matched');
@@ -82,7 +80,7 @@ function card_clicked() {
             second_card_clicked = null;
 
             // check to see if this match is the final match, e.g. user won the game
-            if (match_counter === total_possible_matches) {
+            if (matches === total_possible_matches) {
                 setTimeout(function () {
                     $('#game-won-wrapper').show();
                 }, 50);
@@ -104,18 +102,16 @@ function card_clicked() {
                 temporarily_disable_clicks = false;
             }, 2000);
         }
-        accuracy = matches / attempts;
+        accuracy = Math.round((matches / attempts) * 100) + '%';
         display_stats();
     }
 
 }
 
 function display_stats() {
-    var formatted_accuracy = Math.round(accuracy * 100) + '%';
-
     $('.games-played .value').text(games_played);
     $('.attempts .value').text(attempts);
-    $('.accuracy .value').text(formatted_accuracy);
+    $('.accuracy .value').text(accuracy);
 }
 
 function reset_stats() {
@@ -135,7 +131,6 @@ function reset_game() {
     $('.card').find('.back').removeClass('hidden');
     first_card_clicked = null;
     second_card_clicked = null;
-    match_counter = 0;
     temporarily_disable_clicks = false;
     $('div[status]').attr('status','in_gameplay');
     $('#game-won-wrapper').hide();
